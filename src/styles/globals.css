@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+  
+  body {
+    @apply bg-[#F8FAFC] text-[#1F2937]; /* Using direct values temporarily */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+                'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 
+                'Liberation Mono', 'Courier New', monospace;
+    @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+  }
+}
+
+/* Temporary canvas styling without custom classes */
+canvas#spiral-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+}

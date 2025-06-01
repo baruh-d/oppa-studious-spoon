@@ -9,27 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.511.0",
     "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.0"
   },
   "browserslist": {
-  "production": [
-    "last 3 chromeandroid versions",
-    "last 3 firefoxandroid versions",
-    "last 2 and_uc versions",
-    "last 2 opera versions",
-    "last 2 safari versions",
-    "android >= 5",
-    "ios_saf >= 10",
-    "not op_mini all",
-    "not dead"
-  ],
-  "development": [
-    "last 1 chromeandroid version",
-    "last 1 firefoxandroid version",
-    "last 1 safari version"
-  ]
+    "production": [
+      "last 3 chromeandroid versions",
+      "last 3 firefoxandroid versions",
+      "last 2 and_uc versions",
+      "last 2 opera versions",
+      "last 2 safari versions",
+      "android >= 5",
+      "ios_saf >= 10",
+      "not op_mini all",
+      "not dead"
+    ],
+    "development": [
+      "last 1 chromeandroid version",
+      "last 1 firefoxandroid version",
+      "last 1 safari version"
+    ]
   },
   "eslintConfig": {
     "extends": "next/core-web-vitals",
@@ -38,7 +41,9 @@
       "react/no-unknown-property": [
         "error",
         {
-          "ignore": ["class"]
+          "ignore": [
+            "class"
+          ]
         }
       ]
     }
@@ -49,12 +54,13 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/baruh-d/oppa-studious-spoon"
-    },
+  },
   "license": "MIT",
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.16",
+    "@types/estree": "^1.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
