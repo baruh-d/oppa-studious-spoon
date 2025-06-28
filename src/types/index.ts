@@ -5,6 +5,17 @@
 /**
  * Core service type matching our config/services.ts structure
  */
+
+/**
+ * Service category type for grouping related services
+ */
+export interface ServiceCategory {
+  id: string;
+  title: string;
+  icon: keyof typeof import('lucide-react'); // Matches Lucide icons like Service
+  description: string;
+  services: Service[]; // Array of Service objects
+}
 export interface Service {
   id: string;
   title: string;
@@ -17,6 +28,7 @@ export interface Service {
   }[];
   benefits: string[];
   caseStudies?: string[]; // Optional field for future expansion
+  categoryId?: string; // Optional reference back to parent category
 }
 
 /**
