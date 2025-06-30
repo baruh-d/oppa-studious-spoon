@@ -12,14 +12,14 @@
 export interface ServiceCategory {
   id: string;
   title: string;
-  icon: keyof typeof import('lucide-react'); // Matches Lucide icons like Service
+  icon: string; // Changed from keyof typeof import('lucide-react') 
   description: string;
-  services: Service[]; // Array of Service objects
+  services: readonly Service[]; // Array of Service objects
 }
 export interface Service {
   id: string;
   title: string;
-  icon: keyof typeof import('lucide-react'); // Ensures only valid Lucide icons
+  icon: string; // using string to match your services data
   tagline: string;
   description: string;
   features: {

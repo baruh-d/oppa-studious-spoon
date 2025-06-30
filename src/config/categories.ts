@@ -1,6 +1,7 @@
 import { SERVICES } from './services';
+import { ServiceCategory } from '@/types';
 
-export const SERVICE_CATEGORIES = [
+export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: 'ict-infrastructure',
     title: 'ICT Infrastructure',
@@ -69,4 +70,18 @@ export const SERVICE_CATEGORIES = [
       SERVICES.find(s => s.id === 'erp-solutions')!
     ]
   }
-] as const;
+];
+
+// Create derived types from the actual data
+export type ServiceCategoryId = typeof SERVICE_CATEGORIES[number]['id'];
+
+// Essential utility functions
+export const getCategoryById = (id: string): ServiceCategory | undefined => {
+  return SERVICE_CATEGORIES.find(c => c.id === id);
+};
+
+export const getCategoryForService = (serviceId: string): ServiceCategory | undefined => {
+  return SERVICE_CATEGORIES.find(category => 
+    category.services.some(service => service.id === serviceId)
+  );
+};
